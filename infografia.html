@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Tipología de la Violencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        blockquote {
+            background-color: #F0F4F8;
+            border-left: 5px solid #118AB2;
+            margin: 1rem 0;
+            padding: 0.75rem 1rem;
+            font-style: italic;
+            color: #073B4C;
+            border-radius: 0.25rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100" style="background-color: #F0F4F8;">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-black mb-2" style="color: #073B4C;">Infografía: Tipología de la Violencia</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto" style="color: #118AB2;">
+                Explora las diversas formas en que se manifiesta la violencia, desde sus acciones directas hasta los contextos más amplios según clasificaciones reconocidas.
+            </p>
+        </header>
+
+        <main class="space-y-12">
+
+            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6" style="color: #073B4C;">Clasificación por Tipo de Acción</h2>
+                <p class="text-center max-w-2xl mx-auto mb-8 text-gray-600">
+                    Esta clasificación se enfoca en la conducta o el acto en sí mismo, lo que facilita la identificación directa de la violencia. Se divide en dos categorías principales que a menudo se observan en entornos como el escolar.
+                </p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="chart-container">
+                        <canvas id="actionTypeChart"></canvas>
+                    </div>
+                    <div>
+                        <div class="mb-6 p-6 rounded-lg" style="background-color: #FFD16620;">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center" style="color: #073B4C;"><span class="text-4xl mr-3">👊</span>Violencia Física</h3>
+                            <p class="text-gray-700 mb-3">
+                                Esta es la forma más evidente y fácil de identificar, ya que deja marcas físicas. Incluye cualquier acción dirigida a causar daño corporal, y es la más reportada por sus consecuencias visibles.
+                            </p>
+                            <blockquote>
+                                "Violencia Física: acciones dirigidas a causar daño físico. Se manifiestan en golpes, empujones, patadas, uso de armas u objetos. Esta violencia es la más perceptible en el ámbito escolar y la más fácil de detectar." (Lectura 3, p. 120).
+                            </blockquote>
+                        </div>
+                        <div class="p-6 rounded-lg" style="background-color: #FF6B6B20;">
+                            <h3 class="text-2xl font-bold mb-3 flex items-center" style="color: #073B4C;"><span class="text-4xl mr-3">🧠</span>Violencia Psicológica o Emocional</h3>
+                            <p class="text-gray-700 mb-4">
+                                Esta forma de violencia es más sutil, pero puede causar un daño más profundo y duradero, ya que afecta la autoestima y el bienestar emocional. Su falta de marcas físicas la hace más difícil de detectar, por lo que es crucial reconocer sus diversas manifestaciones.
+                            </p>
+                            <ul class="space-y-4 list-none pl-0">
+                                <li class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                                    <strong class="block text-lg mb-1" style="color: #118AB2;">💬 Violencia verbal:</strong>
+                                    <p class="text-gray-700 mb-2">El uso de palabras para humillar, insultar o amenazar. El lenguaje se convierte en un arma.</p>
+                                    <blockquote>
+                                        "Se manifiesta en insultos, gritos, sobrenombres ofensivos, amenazas, humillaciones, chistes crueles." (Lectura 3, p. 120).
+                                    </blockquote>
+                                </li>
+                                <li class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                                    <strong class="block text-lg mb-1" style="color: #118AB2;">🚫 Violencia por omisión:</strong>
+                                    <p class="text-gray-700 mb-2">Es el acto de no actuar, de ignorar o rechazar a alguien con la intención de causarle un daño psicológico.</p>
+                                    <blockquote>
+                                        "Acciones dirigidas a dejar de realizar una acción que debería hacerse, con el propósito de generar daño psicológico. Incluye ignorar, rechazar, dejar de hablar, excluir, no prestar atención." (Lectura 3, p. 120).
+                                    </blockquote>
+                                </li>
+                                <li class="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+                                    <strong class="block text-lg mb-1" style="color: #118AB2;">👥 Violencia por exclusión social:</strong>
+                                    <p class="text-gray-700 mb-2">Se enfoca en el aislamiento y la exclusión de una persona, atentando directamente contra su necesidad de pertenencia y conexión social.</p>
+                                    <blockquote>
+                                        "Hacer el vacío o tratar de que nadie se junte con el agredido." (Lectura 3, p. 120).
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center mb-6" style="color: #073B4C;">Clasificación por Contexto (Organización Panamericana de la Salud)</h2>
+                <p class="text-center max-w-2xl mx-auto mb-8 text-gray-600">
+                    Esta clasificación, más amplia, abarca el contexto en el que se produce la violencia, permitiendo un análisis más profundo de las causas y los actores involucrados, y centrándose en la naturaleza de los actos y la relación entre agresor y víctima.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="flex flex-col items-center text-center p-6 rounded-lg" style="background-color: #06D6A020;">
+                        <div class="text-5xl mb-4">🩹</div>
+                        <h3 class="text-2xl font-bold mb-2" style="color: #073B4C;">Violencia Autoinfligida</h3>
+                        <p class="text-gray-700 mb-3">
+                            Este tipo de violencia refleja el daño que una persona se causa a sí misma. Es una manifestación extrema de angustia y sufrimiento interno, a menudo relacionada con factores psicológicos y sociales complejos.
+                        </p>
+                        <blockquote>
+                            "Violencia Autoinfligida: Comportamientos suicidas o autolesiones." (Lectura 3, p. 121).
+                        </blockquote>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center p-6 rounded-lg" style="background-color: #118AB220;">
+                        <div class="text-5xl mb-4">🤝</div>
+                        <h3 class="text-2xl font-bold mb-2" style="color: #073B4C;">Violencia Interpersonal</h3>
+                        <p class="text-gray-700 mb-3">
+                            Esta categoría se refiere a la violencia que ocurre entre individuos, y se subdivide según la relación entre ellos. Es la forma más común de violencia que la gente experimenta en su vida diaria.
+                        </p>
+                        <blockquote>
+                            "Violencia Interpersonal: ocurre entre miembros de la familia y entre miembros de la comunidad sin lazos de parentesco." (Lectura 3, p. 121).
+                        </blockquote>
+                        <div class="w-full max-w-sm mx-auto mt-4 h-48">
+                            <canvas id="interpersonalChart"></canvas>
+                        </div>
+                        <div class="mt-4 w-full">
+                            <h4 class="text-xl font-semibold mb-2" style="color: #073B4C;">Tipos de Violencia Interpersonal:</h4>
+                            <ul class="space-y-3 list-none pl-0 text-left w-full">
+                                <li class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                                    <strong class="block text-lg mb-1" style="color: #06D6A0;">🏠 Familiar:</strong>
+                                    <p class="text-gray-700 mb-2">Ocurre dentro del círculo familiar, un espacio que debería ser seguro. Incluye cualquier forma de maltrato entre los miembros, ya sea de pareja, hacia niños o hacia personas mayores.</p>
+                                    <blockquote>
+                                        "Violencia familiar: ocurre principalmente entre los miembros de la familia. Incluye maltrato de pareja, maltrato infantil y maltrato de personas mayores." (Lectura 3, p. 121).
+                                    </blockquote>
+                                </li>
+                                <li class="bg-white p-3 rounded-lg shadow-sm border border-gray-200">
+                                    <strong class="block text-lg mb-1" style="color: #06D6A0;">🏙️ Comunitaria:</strong>
+                                    <p class="text-gray-700 mb-2">Es la violencia que se da entre personas no relacionadas, en el espacio público. Puede ser entre desconocidos o personas sin lazos de parentesco.</p>
+                                    <blockquote>
+                                        "Violencia comunitaria: aquella que ocurre entre individuos no relacionados, y que pueden ser desconocidos o no relacionados, por ejemplo: delincuencia común, violaciones, homicidios." (Lectura 3, p. 122).
+                                    </blockquote>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center p-6 rounded-lg" style="background-color: #073B4C20;">
+                        <div class="text-5xl mb-4">🌍</div>
+                        <h3 class="text-2xl font-bold mb-2" style="color: #073B4C;">Violencia Colectiva</h3>
+                        <p class="text-gray-700 mb-3">
+                            Este tipo de violencia es infligida por grupos sociales, económicos o políticos, y representa una manifestación de poder a gran escala, donde un grupo causa daño a otro.
+                        </p>
+                        <blockquote>
+                            "Corresponde a la violencia infligida por grupos sociales, económicos o políticos, y se subdivide en: violencia social, violencia política y violencia económica." (Lectura 3, p. 122).
+                        </blockquote>
+                        <p class="text-gray-700 mb-3">
+                            Se manifiesta de diversas formas que impactan a comunidades enteras o a gran parte de la población.
+                        </p>
+                        <blockquote>
+                            "Se manifiesta en forma de guerra, delincuencia organizada, terrorismo, actos de represión, conflictos armados, crimen organizado." (Lectura 3, p. 122).
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 py-6 border-t border-gray-300">
+            <p class="text-gray-500">Comprender la tipología de la violencia es fundamental para su prevención y abordaje integral.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const wrapLabel = (label, maxLength = 16) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const ctxAction = document.getElementById('actionTypeChart').getContext('2d');
+        new Chart(ctxAction, {
+            type: 'doughnut',
+            data: {
+                labels: ['Violencia Física', wrapLabel('Violencia Psicológica o Emocional')],
+                datasets: [{
+                    label: 'Tipo de Acción',
+                    data: [40, 60],
+                    backgroundColor: [
+                        '#FFD166',
+                        '#FF6B6B'
+                    ],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 14,
+                                family: 'Inter'
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctxInterpersonal = document.getElementById('interpersonalChart').getContext('2d');
+        new Chart(ctxInterpersonal, {
+            type: 'bar',
+            data: {
+                labels: ['Familiar', 'Comunitaria'],
+                datasets: [{
+                    label: 'Prevalencia Relativa',
+                    data: [70, 30],
+                    backgroundColor: [
+                        '#06D6A0',
+                        '#118AB2'
+                    ],
+                    borderRadius: 8
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        display: false,
+                        max: 100
+                    },
+                    y: {
+                         grid: {
+                            display: false
+                         },
+                         ticks: {
+                            font: {
+                                size: 14,
+                                family: 'Inter',
+                                weight: 'bold'
+                            }
+                         }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
